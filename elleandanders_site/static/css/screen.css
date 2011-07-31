@@ -1,0 +1,217 @@
+img {
+	border: none;
+}
+
+.blue {
+	color: #4461AC;
+}
+
+.hrBlue {
+	color: #c0cbe6;
+	width: 383px;
+}
+
+#content a {
+	text-decoration: none;
+	color: #CECECE;
+}
+
+body {
+	width: 99%;
+	background-color: #FEFDDE;
+	color: #4461AC;
+}
+
+	#wrapper {
+		width: 875px;
+		position: relative;
+		margin: 0px auto;
+	}
+		
+		#header {
+			height: 140px;
+		}
+		
+			#logo {
+				margin: 0px auto;
+				height: 116px;
+				width: 337px;
+				background: transparent url(../img/logo.png) top left no-repeat;
+			}
+		
+			#nav {
+				margin-top: 10px;
+				height: 57px;
+				background: transparent url(..//bg_nav.png) top left no-repeat;
+				position: relative;
+			}
+			
+			    #name-and-date {
+			        height: 14px;
+			        width: 653px;
+			        background: transparent url(../img/name-and-date.png) top left no-repeat;
+			        margin: 0 auto;
+			    }
+		
+				#nav ul {
+					position: absolute;
+					top: 20px;
+					left: 65px;
+					margin: 0px;
+				}
+			
+					#nav ul li{
+						display: inline;
+						margin: 0px;
+					}
+				
+						#nav ul li a {
+							text-decoration: none;
+						}
+						
+		#content {
+			width: 732px;
+			height: 431px;
+			position: relative;
+			margin-top: 50px;
+			margin-left: 70px;
+		}
+		
+		.tree {
+			background: transparent url(../images/bg_home.png) top center no-repeat;
+		}
+		
+			#leftHomePicture {
+				position: absolute;
+				top: 63px;
+				left: 102px;
+			}
+			
+			#rsvpButton {
+				position: absolute;
+				top: 256px;
+				left: 460px;
+			}
+			
+			#rightHomePicture {
+				position: absolute;
+				top: 75px;
+				right: 82px;
+				z-index: 2;
+			}
+			
+/******** RSVP Form Styles *******/
+
+.hidden {
+    display: none;
+}
+
+#div_id_dinner_dancing ul {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+#div_id_dinner_dancing ul li {
+    display: inline;
+    float: right;
+    width: 50px;
+}
+
+#div_id_email label {
+    width: 40px !important;
+    float: left;
+}
+
+input#id_email {
+    margin-left: 70px;
+    width: 350px;
+    float: left;
+}
+
+    /** Labels for name text fields **/
+#div_id_dinnerchoice_set-0-name label, #div_id_dinnerchoice_set-1-name label,
+#div_id_dinnerchoice_set-2-name label, #div_id_dinnerchoice_set-3-name label {
+    float: left;
+    width: 40px !important;
+}
+
+    /** Name text fields **/
+input#id_dinnerchoice_set-0-name, input#id_dinnerchoice_set-1-name,
+input#id_dinnerchoice_set-2-name, input#id_dinnerchoice_set-3-name {
+    width: 350px;
+    float: left;
+    margin-left: 70px;
+}
+
+    /** Labels for dinner choice fields **/
+#div_id_dinnerchoice_set-0-dinner_choice label, #div_id_dinnerchoice_set-1-dinner_choice label,
+#div_id_dinnerchoice_set-2-dinner_choice label, #div_id_dinnerchoice_set-3-dinner_choice label {
+    float: left;
+    width: 100px !important;
+}
+    /** Dinner choice fields **/
+select#id_dinnerchoice_set-0-dinner_choice, select#id_dinnerchoice_set-1-dinner_choice,
+select#id_dinnerchoice_set-2-dinner_choice, select#id_dinnerchoice_set-3-dinner_choice {
+    width: 200px;
+    float: left;
+    margin-left: 10px;
+}
+
+#div_id_dinnerchoice_set-0-name, #div_id_dinnerchoice_set-1-name,
+#div_id_dinnerchoice_set-2-name, #div_id_dinnerchoice_set-3-name {
+    width: 470px;
+    padding-top: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+#div_id_dinnerchoice_set-0-dinner_choice, #div_id_dinnerchoice_set-1-dinner_choice,
+#div_id_dinnerchoice_set-2-dinner_choice, #div_id_dinnerchoice_set-3-dinner_choice {
+    width: 470px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+}
+
+div#div_id_comments {
+    display: none;
+}
+
+.uniForm .textInput, .uniForm .fileUpload, .uniForm .selectInput, .uniForm select, .uniForm textarea {
+    width: 100%;
+}
+
+input[type=text], #id_comments {
+	border: 1px solid #4461ac;
+}
+
+.form_block {
+    height: 20px;
+    width: 470px;
+}
+
+#addGuest {
+    float: left;
+}
+
+#removeGuest {
+    float: right;
+}
+
+input[type=submit] {
+	margin-top: 25px;
+	background-color: #4461ac;
+	width: 95px;
+	height: 25px;
+	color: #FFF;
+	float: left;
+}
+
+#dinner_descriptions {
+    margin-top: 5px;
+}
+#dinner_descriptions p {
+    font-size: 13px;
+}
+
+/******** End RSVP Form Styles *******/
