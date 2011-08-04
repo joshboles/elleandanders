@@ -13,13 +13,38 @@ img {
 
 #content a {
 	text-decoration: none;
-	color: #CECECE;
+	color: #321d00;
 }
 
+h1 {
+	font-size: 24px;
+}
+
+h2 {
+	font-size: 18px;
+}
+
+p.story {
+	font-size: 13px;
+	line-height: 26px;
+	width: 700px;
+	margin: 0px auto;
+}
+
+p.info {
+	font-size: 14px;
+	line-height: 26px;
+}
+
+.emphasis {
+	font-size: 18px; 
+	font-weight: bold;
+}
 body {
 	width: 99%;
 	background-color: #FEFDDE;
-	color: #4461AC;
+	color: #321d00;
+	font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
 }
 
 	#wrapper {
@@ -29,7 +54,7 @@ body {
 	}
 		
 		#header {
-			height: 140px;
+			
 		}
 		
 			#logo {
@@ -50,12 +75,12 @@ body {
 			        height: 14px;
 			        width: 653px;
 			        background: transparent url(../img/name-and-date.png) top left no-repeat;
-			        margin: 0 auto;
+			        margin: 40px auto 0 auto;
 			    }
 		
 				#nav ul {
 					position: absolute;
-					top: 20px;
+					top: 30px;
 					left: 65px;
 					margin: 0px;
 				}
@@ -73,32 +98,8 @@ body {
 			width: 732px;
 			height: 431px;
 			position: relative;
-			margin-top: 50px;
-			margin-left: 70px;
+			margin: 30px auto 0px auto;
 		}
-		
-		.tree {
-			background: transparent url(../images/bg_home.png) top center no-repeat;
-		}
-		
-			#leftHomePicture {
-				position: absolute;
-				top: 63px;
-				left: 102px;
-			}
-			
-			#rsvpButton {
-				position: absolute;
-				top: 256px;
-				left: 460px;
-			}
-			
-			#rightHomePicture {
-				position: absolute;
-				top: 75px;
-				right: 82px;
-				z-index: 2;
-			}
 			
 /******** RSVP Form Styles *******/
 
