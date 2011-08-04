@@ -1,4 +1,5 @@
-from django.core.handlers.wsgi import WSGIHandler
+import os
 
-# set application for WSGI processing
+from django.core.handlers.wsgi import WSGIHandler
+os.environ["DJANGO_SETTINGS_MODULE"] = "elleandanders.settings"
 application = WSGIHandler()
