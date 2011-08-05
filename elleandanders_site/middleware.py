@@ -1,7 +1,3 @@
-from settings import *
-
-DEBUG = False
-
 from django.http import HttpResponseRedirect
 
 class NoWWW:
