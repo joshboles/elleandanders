@@ -2,15 +2,18 @@ from django.db import models
 from model_utils.models import TimeStampedModel
 
 class Rsvp(TimeStampedModel):
-    dinner_dancing = models.BooleanField("Will you be joining us for Dinner & Dancing on June 3rd?")
+    invitation_name = models.CharField(max_length=128, verbose_name="Name on invitation")
+    dinner_dancing = models.BooleanField("Will you be joining us on November 4th?")
     email = models.EmailField()
     comments = models.TextField(blank=True, null=True)
 
 class DinnerChoice(TimeStampedModel):
     DINNER_CHOICES = (
         (None, "-----"),
-        ("turkey", "Stuffed Turkey Roulade"),
-        ("salmon", "Citrus Grilled Salmon"),
+        ("salmon", "Sterling Salmon"),
+        ("chicken", "Boneless, Skinless Chicken"),
+        ("vegitarian", "Vegitarian"),
+        ("kids", "Kid's Dinner")
     )
     rsvp = models.ForeignKey(Rsvp)
     name = models.CharField(max_length=64)

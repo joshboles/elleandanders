@@ -6,9 +6,10 @@ class DinnerInline(admin.TabularInline):
 
 class DinnerAdmin(admin.ModelAdmin):
     list_display = ["name", "email", "dinner_choice"]
+    list_filter = ["dinner_choice"]
 
 class RsvpAdmin(admin.ModelAdmin):
-    list_display = ["email", "dinner_dancing"]
+    list_display = ["invitation_name", "email", "dinner_dancing"]
     list_filter = ["dinner_dancing",]
     inlines = [DinnerInline,]
 

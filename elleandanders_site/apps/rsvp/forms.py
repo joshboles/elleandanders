@@ -7,21 +7,23 @@ class RsvpForm(BetterModelForm):
     dinner_dancing = forms.TypedChoiceField(coerce=int,
                        choices=((0, 'No'), (1, 'Yes')),
                        widget=forms.RadioSelect,
-                       label="Will you be joining us for Dinner & Dancing on June 3rd?"
+                       label="Will you be joining us on November 4th?"
                     )
     
     class Meta:
         model = Rsvp
         fieldsets = [
             ("", {"fields": 
-                ["dinner_dancing", "email", "comments"], "legend": ""
+                ["invitation_name", "dinner_dancing", "email", "comments"], "legend": ""
             }),
         ]
 
 class DinnerChoiceForm(BetterModelForm):
     DINNER_CHOICES = (
-        ("turkey", "Stuffed Turkey Roulade"),
-        ("salmon", "Citrus Grilled Salmon"),
+        ("salmon", "Sterling Salmon"),
+        ("chicken", "Boneless, Skinless Chicken"),
+        ("vegitarian", "Vegitarian"),
+        ("kids", "Kid's Dinner"),
     )
     def __init__(self, *args, **kwargs):
         super(DinnerChoiceForm, self).__init__(*args, **kwargs)

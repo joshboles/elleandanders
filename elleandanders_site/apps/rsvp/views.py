@@ -27,7 +27,7 @@ def rsvp(request):
                 print formset.errors
         
         messages.success(request, "Your RSVP was received.")
-        return redirect("homepage")
+        return redirect("/")
     
     return render_to_response("rsvp/form.html", {
         "form": form,

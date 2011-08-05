@@ -1,0 +1,37 @@
+{% extends ".html" %}
+{% load uni_form_tags %}
+{% block body %}
+<form action="" method="POST" class="uniForm">
+        {% csrf_token %}
+        {{ form|as_uni_form }}
+
+        {{ formset.management_form }}
+        
+        {% for form in formset.forms %}
+            {{ form|as_uni_form }}
+        {% endfor %}
+
+        <div class="form_block">
+            <input type="button" id="addGuest" value="Add Guest">
+            <input type="button" id="removeGuest" value="Remove Guest">
+        </div>
+        <div id="dinner_descriptions">
+            <p>
+                Sterling Salmon with forest mushrooms and leeks, and a champagne cream sauce
+            </p>
+            <p>
+                Boneless, skinless chicken breast, herbed cheese stuffed, white wine supreme sauce
+            </p>
+            <p>
+            	Vegetarian Dinner
+            </p>
+            <p>
+            	Kid's Dinner
+            </p>
+        </div>
+        <div class="form_block">
+            <input type="submit" value="Send">
+        </div>
+    </fieldset>
+</form>
+{% endblock %}
