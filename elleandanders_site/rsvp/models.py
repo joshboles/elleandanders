@@ -12,7 +12,7 @@ class DinnerChoice(TimeStampedModel):
         (None, "-----"),
         ("salmon", "Sterling Salmon"),
         ("chicken", "Boneless, Skinless Chicken"),
-        ("vegitarian", "Vegitarian"),
+        ("vegitarian", "Vegetarian"),
         ("kids", "Kid's Dinner")
     )
     rsvp = models.ForeignKey(Rsvp)
