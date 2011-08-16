@@ -6,7 +6,7 @@
         {{ form|as_uni_form }}
 
         {{ formset.management_form }}
-        
+
         {% for form in formset.forms %}
             {{ form|as_uni_form }}
         {% endfor %}
@@ -15,20 +15,22 @@
             <input type="button" id="addGuest" value="Add Guest">
             <input type="button" id="removeGuest" value="Remove Guest">
         </div>
-        <div id="dinner_descriptions">
-            <p>
+
+        <ul id="dinner_descriptions">
+            <h2>Dinner Descriptions</h2>
+            <li>
                 Sterling Salmon with forest mushrooms and leeks, and a champagne cream sauce
-            </p>
-            <p>
+            </li>
+            <li>
                 Boneless, skinless chicken breast, herbed cheese stuffed, white wine supreme sauce
-            </p>
-            <p>
+            </li>
+            <li>
             	Vegetarian Dinner
-            </p>
-            <p>
+            </li>
+            <li>
             	Kid's Dinner
-            </p>
-        </div>
+            </li>
+        </ul>
         <div class="form_block">
             <input type="submit" value="Send">
         </div>
