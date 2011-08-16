@@ -8,19 +8,20 @@ $(document).ready(function(){
         // Counter used for adding guests
         var additionalGuests = 0;
         $("[name=dinnerchoice_set-TOTAL_FORMS]").val(1);
-        
+
         /**************************************************
          * Hide elements on page that aren't initially used
          **************************************************/
          function hideEverything(){
-             
+
              additionalGuests = 0;
-             
+
             $("#addGuest").addClass("hidden");
             $("#removeGuest").addClass("hidden");
             $("#dinner_descriptions").addClass("hidden");
-            
+
             // Initial recipient of inivtation
+            $("#div_id_dinnerchoice_set-0-name").addClass("hidden");
             $("#div_id_dinnerchoice_set-0-dinner_choice").addClass("hidden");
 
             // Guest 1
@@ -35,28 +36,30 @@ $(document).ready(function(){
             $("#div_id_dinnerchoice_set-3-name").addClass("hidden");
             $("#div_id_dinnerchoice_set-3-dinner_choice").addClass("hidden");
         }
-        
+
         hideEverything();
-        
+
         /**************************************************
          * Handles clicking of attending or not
          *************************************************/
             // When "yes" is clicked, show Add Guest button
             $("#id_dinner_dancing_1").parents("li").click(function(){
                 $("#addGuest").removeClass("hidden");
+                $("#div_id_dinnerchoice_set-0-name").removeClass("hidden");
                 $("#div_id_dinnerchoice_set-0-dinner_choice").removeClass("hidden");
                 $("#dinner_descriptions").removeClass("hidden");
             });
-        
+
             // When "no" is clicked, hide Add Guest button
             $("#id_dinner_dancing_0").parents("li").click(function(){
                 hideEverything();
                 $("#addGuest").addClass("hidden");
                 $("#removeGuest").addClass("hidden");
+                $("#div_id_dinnerchoice_set-0-name").addClass("hidden");
                 $("#div_id_dinnerchoice_set-0-dinner_choice").addClass("hidden");
                 $("#dinner_descriptions").addClass("hidden");
             });
-        
+
         /**************************************************
          * Adding or removing additional guests
          *************************************************/
@@ -69,12 +72,12 @@ $(document).ready(function(){
                     $("#removeGuest").removeClass("hidden");
                     $("[name=dinnerchoice_set-TOTAL_FORMS]").val(additionalGuests+1);
                 }
-                
+
                 if(additionalGuests == 3) {
                     $("#addGuest").addClass("hidden");
                 }
             });
-        
+
             // Click to remove guest
             $("#removeGuest").click(function(){
                 $("#div_id_dinnerchoice_set-" + additionalGuests + "-name").addClass("hidden");
@@ -86,6 +89,6 @@ $(document).ready(function(){
                     $("#removeGuest").addClass("hidden");
                 }
             });
-        
+
     }
 });
